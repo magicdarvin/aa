@@ -1,0 +1,114 @@
+$responsive-menu-breakpoint: 780px !default;
+
+@mixin hide-menu-style() {
+	opacity: 0;
+	pointer-events: none;
+    margin-top: 20px;
+
+    transition: 300ms all;
+
+    text-align: center;
+    width: 80%;
+    
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}
+
+@mixin show-menu-style() {
+	opacity: 1;
+    pointer-events: auto;
+	margin-top: 0;
+
+	z-index: 100;
+}
+
+@mixin toggle-menu-link($breakpoint: $responsive-menu-breakpoint, $display: inline-block) {
+	
+	display: none;
+
+	@media only screen and (max-width: $breakpoint) {
+
+		display: $display;
+	}
+}
+
+@mixin toggle-menu-hide($breakpoint: $responsive-menu-breakpoint, $activation-class: 'active') {
+
+	@media only screen and (max-width: $breakpoint) {
+
+		@include hide-menu-style();		
+		
+		&.#{$activation-class} {
+			@include show-menu-style();
+		}
+	}
+}
+
+@mixin mq-menu($breakpoint: $responsive-menu-breakpoint) {
+	@media only screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin mq-full-menu($breakpoint: $responsive-menu-breakpoint) {
+	@media only screen and (min-width: $breakpoint+1) {
+		@content;
+	}
+}
+
+[data-menu-link] {
+	@include toggle-menu-link;
+}
+
+[data-menu-hide] {
+	@include toggle-menu-hide;
+}
+
+
+/* Helper function */
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+/* Responsive typography */
+$responsive-typography-min-font-size: 12px !default;
+$responsive-typography-max-font-size: 21px !default;
+$responsive-typography-min-width: 420px !default;
+$responsive-typography-max-width: 1280px !default;
+
+@mixin responsive-typography($min-font: $responsive-typography-min-font-size, $max-font: $responsive-typography-max-font-size, $min-width: $responsive-typography-min-width, $max-width: $responsive-typography-max-width) {
+	// font-size: calc(12px + 9 * ( (100vw - 420px) / 860));
+	// $1 : strip-unit($max-font - $min-font);
+	font-size: calc( #{$min-font} + #{strip-unit($max-font - $min-font)}*(100vw - #{$min-width})/#{strip-unit($max-width - $min-width)} );
+}
+
+
+/* Quantity selectors */
+
+@mixin exact($number: 7) {
+
+	&:nth-last-child(#{$number}):first-child, &:nth-last-child(#{$number}):first-child ~ & {
+		@content;
+	}
+}
+
+@mixin more-than($number: 7) {
+
+	&:nth-last-child(n+#{$number}), &:nth-last-child(n+#{$number}) ~ & {
+		@content;
+	}
+}
+
+@mixin less-than($number: 7) {
+
+	&:nth-last-child(-n+#{$number}):first-child, &:nth-last-child(-n+#{$number}):first-child ~ & {
+		@content;
+	}
+}
+
+

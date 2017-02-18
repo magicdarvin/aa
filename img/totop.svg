@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="47px" height="46px" viewBox="0 0 47 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>totop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="totop">
+            <path d="M23.1,45.5273 C35.542,45.5273 45.627,35.4413 45.627,23.0003 C45.627,10.5583 35.542,0.4723 23.1,0.4723 C10.659,0.4723 0.573,10.5583 0.573,23.0003 C0.573,35.4413 10.659,45.5273 23.1,45.5273" id="Fill-17" fill="#FFFFFF"></path>
+            <path d="M23.1,45.5273 C35.542,45.5273 45.627,35.4413 45.627,23.0003 C45.627,10.5583 35.542,0.4723 23.1,0.4723 C10.659,0.4723 0.573,10.5583 0.573,23.0003 C0.573,35.4413 10.659,45.5273 23.1,45.5273 L23.1,45.5273 Z" id="Stroke-19" stroke="#0000FF" stroke-width="0.945"></path>
+            <polygon id="Fill-20" fill="#0000FF" points="30.6 17.2542 30.6 20.9952 24.425 14.8202 24.425 36.2462 21.775 36.2462 21.775 14.8202 15.6 20.9952 15.6 17.2542 23.1 9.7542"></polygon>
+        </g>
+    </g>
+</svg>

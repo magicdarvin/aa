@@ -1,0 +1,3584 @@
+@charset "UTF-8";
+/*
+Theme Name:     Child
+Theme URI:      
+Description:    Child theme
+Author:         SpotDigital.ru
+Author URI:     http://www.SpotDigital.ru
+Template:       bangkokpress_v1-11
+Version:        1.0
+*/
+/* Your css goes here */
+/*!
+ * baguetteBox.js
+ * @author  feimosi
+ * @version 1.8.0
+ * @url https://github.com/feimosi/baguetteBox.js
+ */
+/* line 7, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+/* line 21, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay.visible {
+  opacity: 1;
+}
+
+/* line 23, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay .full-image {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100%;
+  text-align: center;
+}
+
+/* line 32, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay .full-image figure {
+  display: inline;
+  margin: 0;
+  height: 100%;
+}
+
+/* line 36, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay .full-image img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* line 46, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay .full-image figcaption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  white-space: normal;
+  background-color: #fff;
+  padding: 5px;
+}
+
+/* line 60, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-overlay .full-image:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+
+/* line 67, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-transition: left .4s ease, -webkit-transform .4s ease;
+  transition: left .4s ease, -webkit-transform .4s ease;
+  transition: left .4s ease, transform .4s ease;
+  transition: left .4s ease, transform .4s ease, -webkit-transform .4s ease;
+}
+
+/* line 78, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-slider.bounce-from-right {
+  -webkit-animation: bounceFromRight .4s ease-out;
+  animation: bounceFromRight .4s ease-out;
+}
+
+/* line 81, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+#baguetteBox-slider.bounce-from-left {
+  -webkit-animation: bounceFromLeft .4s ease-out;
+  animation: bounceFromLeft .4s ease-out;
+}
+
+@-webkit-keyframes bounceFromRight {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -30px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes bounceFromRight {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -30px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes bounceFromLeft {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 30px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes bounceFromLeft {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 30px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+/* line 117, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-button#next-button, .baguetteBox-button#previous-button {
+  top: 50%;
+  top: calc(50% - 30px);
+  width: 44px;
+  height: 60px;
+}
+
+/* line 123, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-button {
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 15%;
+  background-color: #323232;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #ddd;
+  font: 1.6em sans-serif;
+  -webkit-transition: background-color .4s ease;
+  transition: background-color .4s ease;
+}
+
+/* line 140, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-button#next-button {
+  right: 2%;
+}
+
+/* line 142, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-button#previous-button {
+  left: 2%;
+}
+
+/* line 144, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-button#close-button {
+  top: 20px;
+  right: 2%;
+  right: calc(2% + 6px);
+  width: 30px;
+  height: 30px;
+}
+
+/* line 150, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-button svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*
+    Preloader
+    Borrowed from http://tobiasahlin.com/spinkit/
+*/
+/* line 159, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-spinner {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+/* line 169, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-double-bounce1,
+.baguetteBox-double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* line 183, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_baguetteBox.scss */
+.baguetteBox-double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 60, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_responsive.scss */
+[data-menu-link] {
+  display: none;
+}
+
+@media only screen and (max-width: 736px) {
+  /* line 60, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_responsive.scss */
+  [data-menu-link] {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  /* line 64, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_responsive.scss */
+  [data-menu-hide] {
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 20px;
+    -webkit-transition: 300ms all;
+    transition: 300ms all;
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+  }
+  /* line 42, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_responsive.scss */
+  [data-menu-hide].active {
+    opacity: 1;
+    pointer-events: auto;
+    margin-top: 0;
+    z-index: 100;
+  }
+}
+
+/* Helper function */
+/* Responsive typography */
+/* Quantity selectors */
+/* Slider */
+/* line 2, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 21, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 31, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 35, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 41, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 51, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+/* line 59, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+/* line 66, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 70, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 75, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+/* line 83, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+/* line 87, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-slide img {
+  display: block;
+}
+
+/* line 91, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 95, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 99, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 103, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 107, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 115, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 3, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+}
+
+/* Arrows */
+/* line 19, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* line 44, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+/* line 53, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+/* line 60, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+/* line 66, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 80, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev {
+  left: -25px;
+}
+
+/* line 84, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+/* line 89, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-prev:before {
+  content: '←';
+}
+
+/* line 93, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+[dir='rtl'] .slick-prev:before {
+  content: '→';
+}
+
+/* line 98, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-next {
+  right: -25px;
+}
+
+/* line 102, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+/* line 107, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-next:before {
+  content: '→';
+}
+
+/* line 111, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+[dir='rtl'] .slick-next:before {
+  content: '←';
+}
+
+/* Dots */
+/* line 117, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 122, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 137, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* line 150, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+/* line 168, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+/* line 173, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+/* line 178, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 200, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_slick-theme.scss */
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black;
+}
+
+/* Vars */
+/* Reset */
+/* line 27, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 31, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: none;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* line 40, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 44, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 49, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+/* line 54, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a:hover {
+  color: #000000;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'din_regular';
+  src: url("fonts/din-regular-webfont.eot");
+  src: url("fonts/din-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/din-regular-webfont.woff2") format("woff2"), url("fonts/din-regular-webfont.woff") format("woff"), url("fonts/din-regular-webfont.ttf") format("truetype"), url("fonts/din-regular-webfont.svg#dinregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'formular_medium';
+  src: url("fonts/formular-medium-webfont.eot");
+  src: url("fonts/formular-medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/formular-medium-webfont.woff2") format("woff2"), url("fonts/formular-medium-webfont.woff") format("woff"), url("fonts/formular-medium-webfont.ttf") format("truetype"), url("fonts/formular-medium-webfont.svg#formular_mediummedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'formular_regular';
+  src: url("fonts/formular-regular-webfont.eot");
+  src: url("fonts/formular-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/formular-regular-webfont.woff2") format("woff2"), url("fonts/formular-regular-webfont.woff") format("woff"), url("fonts/formular-regular-webfont.ttf") format("truetype"), url("fonts/formular-regular-webfont.svg#formularregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'minionpro_regular';
+  src: url("fonts/MinionPro-Regular.eot");
+  src: url("fonts/MinionPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/MinionPro-Regular.woff") format("woff"), url("fonts/MinionPro-Regular.ttf") format("truetype"), url("fonts/MinionPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futuriscregular';
+  src: url("fonts/ufonts.com_futurisc-opentype-webfont.eot");
+  src: url("fonts/ufonts.com_futurisc-opentype-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ufonts.com_futurisc-opentype-webfont.woff2") format("woff2"), url("fonts/ufonts.com_futurisc-opentype-webfont.woff") format("woff"), url("fonts/ufonts.com_futurisc-opentype-webfont.ttf") format("truetype"), url("fonts/ufonts.com_futurisc-opentype-webfont.svg#futuriscregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ocrf_regular';
+  src: url("fonts/ufonts.com_ocrf-regularc-opentype-webfont.eot");
+  src: url("fonts/ufonts.com_ocrf-regularc-opentype-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ufonts.com_ocrf-regularc-opentype-webfont.woff") format("woff"), url("fonts/ufonts.com_ocrf-regularc-opentype-webfont.ttf") format("truetype"), url("fonts/ufonts.com_ocrf-regularc-opentype-webfont.svg#ocrf-regularcregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 130, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fr19-27, .fr15-19, .fr12-15 {
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+}
+
+/* line 134, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fr19-27 {
+  font-size: 19px !important;
+  line-height: 25px;
+}
+
+/* line 139, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fr15-19 {
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 144, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fr12-15 {
+  font-size: 12px !important;
+  line-height: 15px;
+}
+
+/* line 149, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fm19-25, .fm30-30, .fm15-19, .fm70-60 {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+}
+
+/* line 153, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fm19-25 {
+  font-size: 19px !important;
+  line-height: 25px;
+}
+
+/* line 158, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fm30-30 {
+  font-size: 30px !important;
+  line-height: 30px;
+}
+
+/* line 163, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fm70-60 {
+  font-size: 70px !important;
+  line-height: 62px;
+  font-weight: normal;
+}
+
+/* line 169, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fm15-19 {
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 174, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.ocrfr12-20, .ocrfr15-19, .ocrfr20-20 {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+}
+
+/* line 178, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.ocrfr12-20 {
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* line 183, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.ocrfr15-19 {
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 188, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.ocrfr20-20 {
+  font-size: 20px !important;
+  line-height: 20px;
+}
+
+/* line 273, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-weight: normal;
+}
+
+/* line 278, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+h1 {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 70px;
+  line-height: 62px;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 278, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+/* line 282, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+h2 {
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  margin-bottom: 10px;
+  letter-spacing: 0.85px;
+}
+
+/* line 290, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+h3 {
+  text-transform: uppercase;
+  color: #0d20ff;
+  letter-spacing: 1px;
+}
+
+/* line 296, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+h3 {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 20px !important;
+  line-height: 20px;
+}
+
+/* line 308, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+body, p, .postquote {
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 308, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  body, p, .postquote {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* line 312, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+article.item {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+/* line 319, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.hide-item {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  position: absolute !important;
+}
+
+/* line 334, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.dn {
+  display: none !important;
+}
+
+/* line 338, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.invis {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* line 344, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+img.aligncenter {
+  display: block;
+}
+
+/* line 350, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.alignleft {
+  display: inline-block;
+}
+
+/* line 355, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.gallery-thumbnail-image {
+  margin-top: 20px;
+}
+
+/* line 359, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.upc {
+  text-transform: uppercase;
+}
+
+/* line 388, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  max-width: 760px;
+}
+
+/* line 399, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 407, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.sidenote p {
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 411, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.top-deck, .wiki, span.tag {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+/* line 416, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav.tags, nav.random {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 20px !important;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* line 420, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav.tags ul a, nav.random ul a {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 20px !important;
+  line-height: 20px;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 0.85px;
+}
+
+/* line 433, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav.tags sup, nav.random sup {
+  font-size: 12px;
+}
+
+/* line 439, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav.random a {
+  padding: 7px 10px;
+}
+
+/* line 444, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.single-post nav.tags {
+  margin-bottom: 40px;
+}
+
+/* line 448, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.text, .text p, .news .item, .news .item p, .wp-caption-text {
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 452, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar .item h4 {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+/* line 458, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar .item p {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* line 462, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.text h3 {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 19px;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 462, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .text h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* line 467, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+span.author, .news .item .date, .calendar .item, .grid .item .date, .calendar > div {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* line 471, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar .item p, span.author {
+  text-transform: uppercase;
+}
+
+/* line 475, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+span.author {
+  display: block;
+}
+
+/* line 479, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid .item .title-link {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 485, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid .item h3, .grid .item h4 {
+  text-transform: none;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+/* line 491, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid .item .tag {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 20px !important;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: block;
+  color: #0d20ff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.85px;
+}
+
+/* line 500, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid .item .tag a {
+  text-decoration: none;
+}
+
+/* line 504, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid .item .tag a:before {
+  content: '#';
+  display: inline-block;
+}
+
+/* line 510, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.category-calendar aside.left h3, .category-news h3 {
+  display: inline-block;
+  border-bottom: 4px solid #0d20ff;
+  padding-bottom: 3px;
+}
+
+/* line 516, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot {
+  background: url("test/zadrot.jpg") center top repeat-y;
+}
+
+/* line 520, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot_text {
+  background: url("test/zadrot_text.jpg") center top repeat-y;
+}
+
+/* line 524, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot1 {
+  background: url("test/zadrot1.jpg") center top -8px repeat-y;
+}
+
+/* line 528, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot2 {
+  background: url("test/zadrot2_new.jpg") center top repeat-y;
+}
+
+/* line 532, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot3 {
+  background: url("test/zadrot3.jpg") center top repeat-y;
+}
+
+/* line 536, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot4 {
+  background: url("test/zadrot4.jpg") center top repeat-y;
+}
+
+/* line 540, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot_cal {
+  background: url("test/zadrot_cal.jpg") center top repeat-y;
+}
+
+/* line 544, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot_cal2 {
+  background: url("test/zadrot_cal2.jpg") center top repeat-y;
+}
+
+/* line 548, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot_wiki {
+  background: url("test/zadrot_wiki.jpg") center top repeat-y;
+}
+
+/* line 552, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+html.zadrot_c {
+  background: url("test/zadrot_cities.jpg") center top repeat-y;
+}
+
+/* General */
+/* line 557, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+body {
+  background: none !important;
+}
+
+/* line 561, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.container {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 567, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a {
+  color: #0d20ff;
+}
+
+/* line 571, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid {
+  font-size: 0;
+}
+
+/* line 574, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid > * {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+/* line 581, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid.middle > * {
+  vertical-align: middle;
+}
+
+/* line 586, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+/* line 590, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid.flex.spread {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 595, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid.spread {
+  text-align: justify;
+}
+
+/* line 598, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid.spread > * {
+  text-align: left;
+}
+
+/* line 602, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.grid.spread:after {
+  content: '';
+  width: 100%;
+  /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+/* line 610, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 615, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav ul li {
+  display: inline-block;
+}
+
+/* line 618, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+nav ul li a {
+  display: block;
+}
+
+/* Header */
+/* line 625, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.site-header {
+  position: relative;
+  margin-bottom: 1px;
+}
+
+/* line 630, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fixed {
+  position: fixed;
+  width: 100%;
+  background: #ffffff;
+  z-index: 100;
+}
+
+/* line 637, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.bottom-deck.fixed, .search-block.fixed {
+  width: 100%;
+  left: 0;
+  padding: 0 !important;
+}
+
+/* line 643, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.bottom-deck.fixed .wrap, .search-block.fixed .wrap {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 186px;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 654, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .bottom-deck.fixed .wrap, .search-block.fixed .wrap {
+    max-width: 675px;
+    padding-left: 0;
+  }
+}
+
+/* line 662, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.bottom-deck.fixed {
+  top: 0;
+}
+
+/* line 666, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.logo.fixed {
+  top: 0;
+  left: 0;
+  margin-top: 0;
+}
+
+/* line 672, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 100;
+}
+
+/* line 679, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.fixed-header.active {
+  position: relative;
+}
+
+/* line 688, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.single-post .site-header {
+  margin-bottom: 26px;
+  margin-bottom: 0px;
+}
+
+/* line 695, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.logo img {
+  max-width: 240px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 703, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.logo .blue {
+  display: none;
+}
+
+/* line 709, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.logo:hover .blue {
+  display: inline-block;
+}
+
+/* line 713, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.logo:hover .black {
+  display: none;
+}
+
+@media only screen and (max-width: 736px) {
+  /* line 719, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck {
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 20px;
+    -webkit-transition: 300ms all;
+    transition: 300ms all;
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+  }
+  /* line 42, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/vendor/_responsive.scss */
+  .top-deck.active {
+    opacity: 1;
+    pointer-events: auto;
+    margin-top: 0;
+    z-index: 100;
+  }
+}
+
+/* line 723, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.top-deck a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 729, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.search-button {
+  padding-top: 15px;
+}
+
+/* line 733, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.cities {
+  padding: 8px 0 0 0;
+}
+
+/* line 736, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.cities.left {
+  width: 186px;
+}
+
+/* line 740, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.cities label {
+  font-weight: bold;
+  display: block;
+}
+
+/* line 749, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.cities select {
+  width: 20px;
+}
+
+/* line 754, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.cities {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+/* line 760, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+#global-city {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 772, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city, .dropdown {
+  position: relative;
+}
+
+/* line 775, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city ul, .dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  display: none;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 794, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city ul li a, .dropdown ul li a {
+  display: block;
+}
+
+/* line 800, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city input, .dropdown input {
+  display: none;
+}
+
+/* line 804, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city label, .dropdown label {
+  display: block;
+  cursor: pointer;
+}
+
+/* line 810, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city.active ul, .dropdown.active ul {
+  z-index: 60;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 821, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+body[class*=page-template-wiki-page] .footer-wrap {
+  position: static;
+}
+
+/* line 828, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city ul {
+  background: #ffffff;
+}
+
+/* line 832, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city ul li a {
+  line-height: 26px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 838, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.global-city ul li a:hover {
+  color: #0d20ff;
+}
+
+/* line 846, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.cities-plus {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 852, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.cities-plus:after {
+  content: '+';
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/* line 858, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.cities-plus.active:after {
+  content: '–';
+}
+
+/* Banners */
+/* line 864, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.banner-top {
+  width: 100%;
+  max-height: 101px;
+}
+
+/* line 868, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.banner-top img {
+  max-height: 101px;
+}
+
+/* line 872, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.banner-featured {
+  max-width: 240px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* line 879, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.banner-top p, .banner-featured p {
+  margin: 0;
+}
+
+/* Main */
+/* line 962, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.title-link, .text-link {
+  display: block;
+}
+
+/* line 971, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main {
+  width: 100%;
+}
+
+/* line 974, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .photo-slider {
+  box-shadow: none;
+  max-width: 100%;
+}
+
+/* line 979, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .photo-slider.wide {
+  width: 100%;
+}
+
+/* line 994, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .photo-slider .item:before {
+  display: inline-block;
+  content: '';
+  width: 37px;
+  height: 26px;
+  background: url("img/photo.png") left top no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 80;
+  pointer-events: none;
+}
+
+/* line 1010, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.news, section.site-main .item.calendar {
+  box-shadow: none;
+  margin-left: 0;
+}
+
+/* line 932, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.news a, section.site-main .item.calendar a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* line 936, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.news a:hover, section.site-main .item.calendar a:hover {
+  color: #0d20ff;
+}
+
+/* line 942, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.news .text, section.site-main .item.calendar .text {
+  padding: 10px 0;
+}
+
+/* line 946, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.news .text-link, section.site-main .item.calendar .text-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 955, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.news .text, section.site-main .item.news .date, section.site-main .item.calendar .text, section.site-main .item.calendar .date {
+  position: static;
+  display: block;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+/* line 1022, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 1px #0d20ff inset;
+}
+
+/* line 1032, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item .wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 1042, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item .text {
+  padding: 6px 6px;
+}
+
+/* line 1046, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item .text-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 1055, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item .date {
+  position: absolute;
+  bottom: -15px;
+  left: -24px;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-weight: bold;
+}
+
+/* line 1064, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item img {
+  display: block;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+/* line 1072, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item:hover img {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* line 1086, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.calendar .date {
+  text-transform: uppercase;
+}
+
+/* line 1090, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .item.calendar a {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 1098, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.category-calendar .site-header {
+  margin-bottom: 43px;
+}
+
+/* line 1103, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.category-calendar .dropdown.active ul {
+  top: 13px;
+  padding: 0 10px;
+  margin-left: -10px;
+}
+
+/* line 1108, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.category-calendar .dropdown.active ul li + li {
+  margin-top: 5px;
+}
+
+/* line 1112, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.category-calendar .dropdown.active ul li:nth-child(2) {
+  margin-top: 10px;
+}
+
+/* line 1120, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news h3 a, .calendar h3 a {
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* line 1126, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news .item, .calendar .item {
+  box-shadow: none;
+  margin-left: 0;
+}
+
+/* line 932, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news .item a, .calendar .item a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* line 936, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news .item a:hover, .calendar .item a:hover {
+  color: #0d20ff;
+}
+
+/* line 942, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news .item .text, .calendar .item .text {
+  padding: 10px 0;
+}
+
+/* line 946, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news .item .text-link, .calendar .item .text-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 955, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.news .item .text, .news .item .date, .calendar .item .text, .calendar .item .date {
+  position: static;
+  display: block;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+/* line 1130, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.slick-prev, .slick-next {
+  top: -30px;
+  box-shadow: none;
+  width: 30px;
+}
+
+/* line 1136, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.slick-prev:before, .slick-next:before {
+  font-family: initial;
+  color: #0d20ff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* line 1143, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.slick-prev {
+  left: 45%;
+}
+
+/* line 1147, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.slick-next {
+  right: 45%;
+}
+
+/* line 1151, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+/* line 1155, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.news {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+/* line 1159, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.news .content {
+  max-height: 74px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* line 1166, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.news h3 {
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* line 1171, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.news .item {
+  width: 236px;
+}
+
+/* line 1174, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.news .item .date {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Calendar */
+/* line 1185, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.calendar > div {
+  margin-bottom: 14px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+/* line 1191, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.calendar .item {
+  display: inline-block;
+  width: 160px;
+  max-width: 100%;
+  margin-bottom: 18px;
+}
+
+/* line 1197, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.calendar .item p {
+  margin-bottom: 0;
+}
+
+/* line 1201, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.calendar .item p + p {
+  margin-top: 1rem;
+}
+
+/* line 1208, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+aside.calendar.left .item h4 {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* line 1216, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.filter {
+  font-weight: bold;
+  min-width: 20%;
+}
+
+/* line 1220, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.filter .inputs, .filter select {
+  margin-top: 13px;
+  display: block;
+}
+
+/* line 1226, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar-filters {
+  margin-bottom: 51px;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* line 1236, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar-filters input {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* line 1242, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar-filters input.hasDatepicker {
+  width: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+/* line 1248, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar-filters select {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 1257, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.calendar-filters a.current {
+  color: #000000;
+}
+
+/* line 1264, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.site-main .calendar-events .item:hover img {
+  opacity: 1;
+}
+
+/* line 1270, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.ui-datepicker.ui-widget {
+  background: #ffffff;
+  z-index: 100 !important;
+  padding: 10px;
+}
+
+/* line 1276, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 5px 6px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+/* line 1284, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer > * {
+  padding: 0 6px;
+}
+
+/* line 1288, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer * {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  font-size: 9px !important;
+  line-height: 15px;
+  font-weight: bold;
+}
+
+/* line 1295, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  font-size: 9px !important;
+  line-height: 15px;
+  font-weight: bold;
+}
+
+/* line 1305, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1314, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer .copy {
+  letter-spacing: 0.4px;
+}
+
+/* line 1319, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+footer.footer .made {
+  letter-spacing: 0.5px;
+}
+
+/* line 1329, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.footer-logo {
+  max-width: 150px;
+}
+
+/* Wiki */
+/* line 1334, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-link {
+  position: relative;
+  display: inline-block;
+  background: #0d20ff !important;
+  color: #ffffff !important;
+  padding: 3px 6px;
+  text-decoration: none;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/* line 1346, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-link:hover {
+  color: #ffffff !important;
+}
+
+/* line 1350, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-link:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  position: absolute;
+  top: 0;
+  right: -14px;
+  border-left: 14px solid #0d20ff;
+  border-top: 14px solid #ffffff;
+  border-bottom: 13px solid #ffffff;
+  box-sizing: border-box;
+}
+
+/* line 1365, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+#insts .wiki-section {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* line 1372, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-featured .description {
+  font-size: 26px !important;
+  line-height: 30px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+
+/* line 1382, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.page-template-wiki-page .logo, body[class*=page-template-wiki-page] .logo, .tax-relation .logo {
+  margin-left: 0 !important;
+}
+
+/* line 1385, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.page-template-wiki-page .logo span, body[class*=page-template-wiki-page] .logo span, .tax-relation .logo span {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 30px !important;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 38px !important;
+  letter-spacing: 1px;
+}
+
+/* line 1395, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.page-template-wiki-page select, body[class*=page-template-wiki-page] select, .tax-relation select {
+  display: block;
+  max-width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+}
+
+/* line 1406, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+}
+
+/* line 1413, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki ul li {
+  margin-bottom: 5px;
+}
+
+/* line 1417, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki ul p {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  font-weight: normal;
+  text-transform: none;
+}
+
+/* line 1429, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* line 1433, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki a:hover {
+  color: #0d20ff;
+}
+
+/* line 1442, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki .name {
+  color: #0d20ff;
+}
+
+/* line 1445, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki .name:before {
+  content: '#';
+  display: inline-block;
+}
+
+/* line 1451, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki input[type=text] {
+  display: block;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  color: #0d20ff;
+  margin-bottom: 20px;
+}
+
+/* line 1460, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki .letter {
+  color: #0d20ff;
+  margin-top: 12px;
+}
+
+/* line 1467, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki .dropdown ul {
+  margin-top: 0;
+}
+
+/* line 1477, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki .desktop .dropdown ul {
+  margin-top: -19px;
+}
+
+/* line 1483, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki a.current {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+}
+
+/* line 1494, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.page-template-wiki-page ul li sup {
+  display: none;
+}
+
+/* line 1501, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+section.wiki-top {
+  width: 100%;
+}
+
+/* line 1507, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-page p {
+  max-width: 740px;
+}
+
+/* line 1511, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-page h1 {
+  margin-bottom: 16px;
+  letter-spacing: 0.8px;
+}
+
+/* line 1516, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-page .about-image {
+  margin-bottom: 30px;
+}
+
+/* line 1521, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-page .about-content p {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 1521, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .wiki-page .about-content p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* line 1526, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-page .intro {
+  margin-bottom: 30px;
+}
+
+/* line 1529, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wiki-page .intro p {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  line-height: 21px;
+  letter-spacing: 0.4px;
+}
+
+/* line 1538, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.scroll-back-to-top-wrapper {
+  background: none;
+  background: url("img/totop.svg") center center no-repeat;
+  width: 46px;
+  height: 46px;
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Single */
+/* line 1556, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+div.cut {
+  display: none;
+}
+
+/* line 1560, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+#baguetteBox-overlay .full-image figcaption {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* line 1566, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.single-post section.site-main {
+  padding: 0 10px;
+}
+
+/* line 1571, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.meta-info {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* line 1576, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.meta-info img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 1581, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.meta-info .views, .meta-info .comments {
+  letter-spacing: 1px;
+}
+
+/* line 1585, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.meta-info .fb {
+  margin-left: 10px;
+}
+
+/* line 1590, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.bottom-meta {
+  padding: 6px 0;
+}
+
+/* line 1595, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.main-tag {
+  display: block;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* line 1601, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+/* line 1605, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents * {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  line-height: 20px;
+}
+
+/* line 1610, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents a {
+  text-decoration: none;
+}
+
+/* line 1614, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents span.text {
+  letter-spacing: 0.6px;
+}
+
+/* line 1618, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 1624, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents > span {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* line 1631, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents.fixed {
+  top: 55px;
+  left: 0;
+  width: 100%;
+  z-index: 110;
+}
+
+@media only screen and (max-width: 736px) {
+  /* line 1631, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .contents.fixed {
+    top: 45px;
+  }
+}
+
+/* line 1641, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.contents.fixed .wrap {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 1641, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .contents.fixed .wrap {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1099px) {
+  /* line 1641, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .contents.fixed .wrap {
+    max-width: 675px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 1641, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .contents.fixed .wrap {
+    padding-left: 186px;
+  }
+}
+
+/* line 1661, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.post-section {
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+
+/* line 1666, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.intro {
+  padding-top: 3px;
+}
+
+/* line 1669, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.intro p {
+  margin-bottom: 0;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+/* line 1676, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.postquote {
+  padding-left: 5%;
+  max-width: 720px;
+}
+
+/* line 1681, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.intro-image {
+  display: inline-block;
+}
+
+/* line 1685, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.single-hero {
+  position: relative;
+}
+
+/* line 1688, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.single-hero h1 {
+  padding: 40px;
+  color: #0d20ff;
+  margin-bottom: 0;
+}
+
+/* line 1695, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.wp-caption-text {
+  display: block;
+  max-width: 100%;
+  margin-right: 0;
+  text-align: center;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* line 1706, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content h1 {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* line 1711, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content p {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  letter-spacing: 0.85px;
+}
+
+/* line 1721, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content a[href*="/tag/"], .the-content a[href*="/relation/"] {
+  color: #0d20ff;
+  border-bottom: none;
+}
+
+/* line 1726, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content a[href*="/tag/"]:hover, .the-content a[href*="/relation/"]:hover {
+  color: #000000;
+}
+
+/* line 1734, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .wp-caption {
+  max-width: 100%;
+}
+
+/* line 1739, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .tooltip {
+  display: inline-block;
+  position: relative;
+  color: #0d20ff;
+  border-bottom: 1px dashed #0d20ff;
+}
+
+/* line 1746, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .tooltip .wrap {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 15px;
+  padding: 1rem;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* line 1765, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .tooltip:hover .wrap {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 100;
+  min-width: 200px;
+}
+
+/* line 1780, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content p:empty {
+  display: none !important;
+}
+
+/* line 1784, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .sidenote {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin-bottom: 2rem;
+}
+
+/* line 1793, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .sidenote .item {
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* line 1798, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .sidenote .item .wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 1804, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .sidenote .item .text {
+  /*position: static;*/
+}
+
+/* line 1810, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row {
+  font-size: 0;
+}
+
+/* line 1813, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row .item {
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* line 1820, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .col {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  font-family: "formular_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+/* line 1832, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row .col:nth-last-child(2):first-child, .the-content .row .col:nth-last-child(2):first-child ~ .col {
+  max-width: 380px;
+  margin-right: 40px;
+}
+
+/* line 1837, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row.wide .col:nth-last-child(2):first-child, .the-content .row.wide .col:nth-last-child(2):first-child ~ .col {
+  max-width: 480px;
+  margin-right: 30px;
+}
+
+/* line 1842, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row .col:nth-last-child(3):first-child, .the-content .row .col:nth-last-child(3):first-child ~ .col {
+  max-width: 240px;
+  margin-right: 40px;
+}
+
+/* line 1847, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row.wide .col:nth-last-child(3):first-child, .the-content .row.wide .col:nth-last-child(3):first-child ~ .col {
+  max-width: 300px;
+  margin-right: 30px;
+}
+
+/* line 1852, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .row .col:nth-last-child(4):first-child, .the-content .row .col:nth-last-child(4):first-child ~ .col {
+  max-width: 220px;
+  margin-right: 40px;
+}
+
+/* line 1859, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.large-text p {
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  max-width: 580px;
+}
+
+/* line 1868, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .opening-date-place {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 1873, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .opening-date-place {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  font-size: 15px !important;
+  line-height: 27px !important;
+}
+
+/* line 1878, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .opening-date-place * {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  font-size: 15px !important;
+  line-height: 27px !important;
+}
+
+/* line 1885, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .author-name {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+/* line 1891, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.the-content .author-name p {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* Comments */
+/* line 1898, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-reply-title {
+  display: none;
+}
+
+/* line 1902, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+/* line 1906, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form .comment-form-author {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+/* line 1910, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form .wp-social-login-widget {
+  display: none;
+}
+
+/* line 1914, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form label {
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* line 1920, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form input[type=text], .comment-form textarea {
+  display: inline-block;
+  height: 27px;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #e3e3e3;
+}
+
+/* line 1930, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form * {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/* line 1937, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form .logged-in-as a {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+}
+
+/* line 1942, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-form .submit {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  color: #0d20ff;
+  border-bottom: 1px dashed #0d20ff;
+}
+
+/* line 1954, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.loadmore {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 1961, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.loadmore img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 1967, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1972, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list .children {
+  list-style: none;
+}
+
+/* line 1976, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list .reply {
+  display: none;
+  float: right;
+}
+
+/* line 1981, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list .comment:hover > .comment-body > .reply {
+  display: block;
+}
+
+/* line 1985, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list .comment-author, .comment-list p {
+  display: inline-block;
+}
+
+/* line 1989, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list p {
+  max-width: 600px;
+}
+
+/* line 1993, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list .avatar {
+  display: none;
+}
+
+/* line 1997, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list * {
+  font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  font-size: 12px !important;
+}
+
+/* line 2002, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list cite.fn {
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 12px !important;
+  line-height: 21px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* line 2008, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.comment-list .commentmetadata {
+  display: none;
+}
+
+/* line 2018, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar {
+  margin-bottom: 20px;
+}
+
+/* line 2024, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed {
+  margin-bottom: 0;
+  max-width: 300px;
+}
+
+/* line 2037, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .shim {
+  display: none;
+  width: 100%;
+}
+
+/* line 2041, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder {
+  position: relative;
+  font-size: 85%;
+  background: #ffffff;
+}
+
+/* line 2060, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .bar {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  display: none;
+}
+
+/* line 2071, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .bar {
+  display: block;
+}
+
+/* line 2075, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .bar .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #0d20ff;
+}
+
+/* line 2083, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 2089, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i {
+  display: block;
+  text-align: left;
+  font-style: normal;
+}
+
+/* line 2094, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.static .holder .labels i {
+  width: auto !important;
+}
+
+/* line 2097, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .labels i {
+  display: block;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* line 2118, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 2123, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .labels i span:nth-child(1) {
+  display: inline-block;
+}
+
+/* line 2133, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels .counter {
+  display: none;
+}
+
+/* line 2137, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .labels .counter {
+  display: inline-block;
+}
+
+/* line 2141, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .labels {
+  height: 20px;
+}
+
+/* line 2145, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .labels i span:nth-child(2) {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  display: none;
+  width: 100%;
+  padding: 10px;
+}
+
+/* line 2157, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder .labels i:hover span:nth-child(2) {
+  display: inline-block;
+}
+
+/* line 2175, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i:hover::after, .progressbar .holder .labels i:focus::after {
+  top: -.2em;
+}
+
+/* line 2178, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i.read::before, .progressbar .holder .labels i.read span:nth-child(1) {
+  border-color: #0d20ff;
+}
+
+/* line 2182, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i.read:hover::before, .progressbar .holder .labels i.read:focus::before {
+  background-color: #0d20ff;
+}
+
+/* line 2186, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i.reading::after {
+  color: #222;
+}
+
+/* line 2189, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar .holder .labels i.reading:hover::after, .progressbar .holder .labels i.reading:focus::after {
+  top: 0;
+}
+
+/* line 2192, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .holder {
+  max-width: 1230px;
+}
+
+/* line 2218, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.with-banner ~ .progressbar.isfixed .holder {
+  top: 175px;
+}
+
+/* line 2222, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.progressbar.isfixed .shim {
+  display: block;
+}
+
+/* Responsive */
+/* line 2227, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.mobile-menu, .mobile-search {
+  display: none;
+}
+
+@media only screen and (max-width: 736px) {
+  /* line 2227, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .mobile-menu, .mobile-search {
+    display: inline-block;
+  }
+}
+
+/* line 2231, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.search-block {
+  width: 100%;
+  background: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* line 2240, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.search-block.active {
+  max-height: 5rem;
+  overflow: visible;
+  z-index: 120;
+}
+
+/* line 2247, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+[name=s], .wiki input[type=text] {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #0d20ff;
+  font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 15px !important;
+  line-height: 19px;
+  text-transform: uppercase;
+  padding: 12px;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* line 2268, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+#searchform br.clear {
+  display: none;
+}
+
+/* line 2272, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+#searchform [type=submit] {
+  display: none;
+}
+
+/* line 2276, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+#searchform [name=s] {
+  border: 1px solid #0d20ff;
+  height: 51px;
+}
+
+/* line 2282, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.baguetteBox-button {
+  background: none !important;
+}
+
+/* line 2286, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.baguetteBox-button#next-button, .baguetteBox-button#previous-button {
+  top: 0;
+  width: 20%;
+  height: 1000px;
+  opacity: 0;
+}
+
+/* line 2293, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.baguetteBox-button#previous-button {
+  left: 0;
+}
+
+/* line 2297, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.baguetteBox-button#next-button {
+  right: 0;
+}
+
+/* line 2301, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.desktop {
+  display: none !important;
+}
+
+/* line 2307, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.textmode span {
+  display: inline-block;
+  line-height: 0.9;
+}
+
+/* line 2312, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.textmode span.im {
+  border-bottom: 3px solid #000000;
+}
+
+/* line 2316, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.textmode .txt {
+  margin-right: 4px;
+}
+
+/* line 2320, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.textmode .im {
+  margin-left: 5px;
+}
+
+/* line 2326, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.textmode.active span.im {
+  border: none;
+}
+
+/* line 2330, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+a.textmode.active span.txt {
+  border-bottom: 3px solid #000000;
+}
+
+/* line 2339, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+body.textmode .site-main .item img {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* line 2345, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+body.textmode .site-main .item:hover img {
+  opacity: 1 !important;
+  pointer-events: inherit !important;
+}
+
+/* line 2354, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.below-fixed {
+  padding-top: 90px;
+}
+
+/* line 2359, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+.photos-filter .item:before {
+  display: inline-block;
+  content: '';
+  width: 37px;
+  height: 26px;
+  background: url("img/photo.png") left top no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 80;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 2387, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .below-fixed {
+    padding-top: 120px;
+  }
+  /* line 2391, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.mode {
+    display: none !important;
+  }
+  /* line 2396, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.tags li + li {
+    margin-top: 7px;
+  }
+  /* line 2403, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.mobile a {
+    color: #0d20ff;
+  }
+  /* line 2408, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.social {
+    border-top: 1px solid #0d20ff;
+    border-bottom: 1px solid #0d20ff;
+    padding: 10px 0;
+  }
+  /* line 2413, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.social ul {
+    display: block;
+  }
+  /* line 2416, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.social ul li {
+    display: inline-block;
+  }
+  /* line 2422, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .slick-prev {
+    left: 36%;
+  }
+  /* line 2426, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .slick-next {
+    right: 36%;
+  }
+  /* line 2432, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .wiki a.current {
+    float: right;
+  }
+  /* line 2436, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .wiki input[type=text] {
+    border: 1px solid #0d20ff;
+    background: url("img/search_blue.png") right 10px center no-repeat;
+  }
+  /* line 2452, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .expand {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  /* line 2460, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .expand span {
+    display: inline-block;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  /* line 2465, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .expand.active span {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  /* line 2476, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.blocks > * {
+    display: block;
+  }
+  /* line 2481, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .banner-top, .banner-featured {
+    display: none !important;
+  }
+  /* line 2485, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .tags ul, .news .grid, aside.calendar {
+    display: block;
+    max-height: 100px;
+    overflow: hidden;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  /* line 2492, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .tags ul.active, .news .grid.active, aside.calendar.active {
+    max-height: 500px;
+  }
+  /* line 2496, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .tags ul li, .news .grid li, aside.calendar li {
+    display: block;
+  }
+  /* line 2501, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .section-title {
+    margin-left: 20px;
+  }
+  /* line 2505, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main {
+    padding: 0 20px;
+  }
+  /* line 2508, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .photo-slider {
+    width: 100%;
+  }
+  /* line 2511, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .photo-slider .item {
+    max-width: 100%;
+  }
+  /* line 2516, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item {
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 2524, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item .date {
+    position: static;
+  }
+  /* line 2528, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item .text {
+    padding: 10px 0;
+  }
+  /* line 2534, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .news .grid, aside.calendar {
+    max-height: 340px;
+  }
+  /* line 2537, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .news .grid.active, aside.calendar.active {
+    max-height: 900px;
+  }
+  /* line 2543, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .content .cities {
+    display: none;
+  }
+  /* line 2548, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.news, aside.calendar, .bottom-deck {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  /* line 2556, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .mobile {
+    display: none;
+  }
+  /* line 2560, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .tags {
+    margin-left: -10px;
+  }
+  /* line 2563, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .tags a {
+    text-transform: uppercase;
+    padding: 10px 10px;
+  }
+  /* line 2571, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item.featured {
+    width: 100%;
+    max-height: 400px;
+    max-width: calc(100% - 20px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 2579, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item.featured .wrap {
+    max-height: 400px;
+    overflow: hidden;
+  }
+  /* line 2585, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .banner-featured + .item.featured {
+    width: calc(100% - 310px);
+    margin-bottom: 0;
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 0;
+    float: right;
+    max-height: 400px;
+  }
+  /* line 2596, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .banner-featured + .item.featured .wrap {
+    max-height: 400px;
+    overflow: hidden;
+  }
+  /* line 2604, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item.wide {
+    width: calc(100% - 20px);
+    max-width: 100%;
+  }
+  /* line 2608, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item.wide .wrap {
+    max-height: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 2621, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .page-template-wiki-page .logo span, body[class*=page-template-wiki-page] .logo span, .tax-relation .logo span {
+    font-size: 50px !important;
+  }
+  /* line 2627, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .below-fixed {
+    padding-top: 88px;
+  }
+  /* line 2635, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.top a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 2640, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .bottom-deck {
+    padding-left: 186px;
+    margin-bottom: 12px;
+  }
+  /* line 2645, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .single-post .bottom-deck {
+    padding-left: 186px;
+  }
+  /* line 2652, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  nav.social a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* line 2660, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .category-news section.site-main {
+    width: 100%;
+  }
+  /* line 2663, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .category-news section.site-main .item {
+    max-width: 230px;
+  }
+  /* line 2669, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main {
+    width: calc(100% - 96px);
+    margin-left: -15px;
+    margin-right: -55px;
+  }
+  /* line 2676, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main.the-main {
+    width: calc(100% - 96px);
+    margin-left: -15px;
+    margin-right: -55px;
+  }
+  /* line 2685, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .grid.spread {
+    text-align: left;
+  }
+  /* line 2689, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main.top-nav {
+    width: calc(100% - 186px);
+    margin-bottom: 24px;
+  }
+  /* line 2694, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item {
+    margin-bottom: 70px;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  /* line 2700, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item.wide, section.site-main .item.photo-slider {
+    width: calc(100% - 20px);
+  }
+  /* line 2704, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item .wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  /* line 2710, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item .text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  /* line 2718, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .item.no-img .text {
+    position: static;
+  }
+  /* line 2725, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .site-header, .single-post .site-header {
+    margin-top: 11px;
+  }
+  /* line 2731, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .page-template-wiki-page .bottom-deck .wrap, body[class*=page-template-wiki-page] .bottom-deck .wrap, .tax-relation .bottom-deck .wrap {
+    padding-left: 186px;
+  }
+  /* line 2735, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .page-template-wiki-page .bottom-deck.fixed .wrap, body[class*=page-template-wiki-page] .bottom-deck.fixed .wrap, .tax-relation .bottom-deck.fixed .wrap {
+    padding-left: 372px;
+  }
+  /* line 2739, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .page-template-wiki-page .site-header, body[class*=page-template-wiki-page] .site-header, .tax-relation .site-header {
+    margin-bottom: 46px;
+  }
+  /* line 2746, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .page-template-wiki-page section.site-main, body[class*=page-template-wiki-page] section.site-main {
+    width: 100%;
+  }
+  /* line 2751, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .wiki-featured {
+    width: 100%;
+  }
+  /* line 2756, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.wiki > * {
+    width: 150px;
+  }
+  /* line 2762, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.wiki .large {
+    width: 305px;
+  }
+  /* line 2767, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  aside.left {
+    width: 166px;
+  }
+  /* line 2771, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  aside.left.calendar {
+    width: 166px;
+  }
+  /* line 2776, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  aside.right {
+    width: 260px;
+    display: inline-block;
+    float: right;
+  }
+  /* line 2781, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  aside.right p {
+    font-family: "formular_medium", Helvetica, Arial, Tahoma, sans-serif;
+    font-size: 14px !important;
+    line-height: 1.1;
+    font-weight: bold;
+  }
+  /* line 2788, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  aside.right > p {
+    line-height: 19px;
+    padding-left: 22px;
+  }
+  /* line 2793, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  aside.right .item {
+    width: auto;
+    margin-bottom: 10px;
+  }
+  /* line 2801, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .photo-slider .mb .item {
+    margin-bottom: 70px !important;
+  }
+}
+
+@media only screen and (min-width: 737px) {
+  /* line 2809, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .desktop {
+    display: inline-block !important;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  /* line 2820, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .below-fixed {
+    padding-top: 21px;
+  }
+  /* line 2828, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.wiki > * {
+    width: 200px;
+  }
+  /* line 2834, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.wiki .large {
+    width: 405px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* line 2842, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck .top {
+    margin-left: 50px;
+  }
+  /* line 2848, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .the-content p {
+    margin-right: 40px;
+  }
+  /* line 2853, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .loadmore-wrap {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 100;
+  }
+  /* line 2865, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .photo-slider .item {
+    max-width: 300px;
+    width: 300px !important;
+    margin-left: 35px;
+  }
+  /* line 2871, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.site-main .photo-slider .item:nth-child(3n+3) {
+    margin-right: 55px;
+  }
+  /* line 2880, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .category-calendar nav.tags {
+    margin-top: -19px;
+    margin-bottom: 20px;
+  }
+  /* line 2888, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .single-post aside.left {
+    width: 166px;
+  }
+  /* line 2892, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .single-post section.site-main {
+    padding: 0;
+  }
+  /* line 2898, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .single-post section.site-main.the-content {
+    padding-left: 34px;
+  }
+  /* line 2903, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .category-calendar {
+    /* .archive.category         .archive.tax-relation, .page-template-wiki-page, */
+  }
+  /* line 2905, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .category-calendar section.site-main:first-of-type {
+    margin-top: -40px;
+  }
+  /* line 2910, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.wiki > * {
+    width: 240px;
+  }
+  /* line 2916, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .grid.wiki .large {
+    width: 485px;
+  }
+  /* line 2921, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  section.news {
+    margin-top: -64px;
+    position: relative;
+    z-index: 10;
+  }
+  /* line 2929, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  a.cut {
+    position: relative;
+    z-index: 20;
+  }
+  /* line 2934, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  footer.footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  /* line 2938, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  footer.footer .copy {
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+  /* line 2942, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  footer.footer .made {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 230px;
+  }
+  /* line 2953, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  footer.footer .menu-one, footer.footer .menu-two, footer.footer .subscribe {
+    width: 100px;
+    margin-left: 25px;
+  }
+  /* line 2959, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  body.home .footer-wrap.abs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  /* line 2970, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .bottom-deck .wrap {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* line 2981, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .logo {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+  /* line 2986, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* line 2996, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .mobile-menu {
+    margin-left: auto;
+    padding-top: 4px;
+    margin-right: 10px;
+  }
+  /* line 3001, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .mobile-menu img {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  /* line 3006, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .mobile-menu.active img {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  /* line 3012, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck {
+    background: #ffffff;
+    padding: 10px;
+    width: 100% !important;
+    left: 0 !important;
+    max-height: calc(100vh - 106px);
+    overflow-y: scroll;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  /* line 3030, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck .custom-menu {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 3034, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck nav.social {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 3038, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck nav.top {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 3042, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck .footer-clone {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 3045, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck .footer-clone > * + * {
+    margin-top: 10px;
+  }
+  /* line 3051, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck .footer-clone *, .top-deck nav.top * {
+    font-family: "ocrf_regular", Helvetica, Arial, Tahoma, sans-serif;
+    font-size: 12px !important;
+    line-height: 21px;
+    color: #000000;
+    font-size: 12px !important;
+    line-height: 17px;
+  }
+  /* line 3060, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck nav + nav {
+    margin-top: 10px;
+  }
+  /* line 3064, /Users/pavel/Google Drive/ServerSpot/aroundart.ru/wp-content/themes/child/css/styles.scss */
+  .top-deck nav, .top-deck nav li {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
