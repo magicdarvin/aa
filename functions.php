@@ -17,12 +17,12 @@ add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
 
 add_theme_support( 'title-tag' );
 
-function theme_scripts() {       
-    wp_register_script('themescripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', array('jquery', 'jquery-ui-datepicker'), '1.0.0', true); 
-     // wp_register_script('dirtyfuckingscripts', get_stylesheet_directory_uri() . '/js/dh.js', array('jquery'), '1.0.0', true); 
-    wp_register_script('slick-slider', get_stylesheet_directory_uri() . '/js/vendor/slick.min.js', array('jquery'), '1.0.0', true); 
-    wp_enqueue_script('themescripts'); 
-    // wp_enqueue_script('dirtyfuckingscripts'); 
+function theme_scripts() {
+    wp_register_script('themescripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', array('jquery', 'jquery-ui-datepicker'), '1.0.0', true);
+     // wp_register_script('dirtyfuckingscripts', get_stylesheet_directory_uri() . '/js/dh.js', array('jquery'), '1.0.0', true);
+    wp_register_script('slick-slider', get_stylesheet_directory_uri() . '/js/vendor/slick.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('themescripts');
+    // wp_enqueue_script('dirtyfuckingscripts');
     wp_register_style('themecss', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', 'all');
     wp_enqueue_style('themecss');
     wp_register_style('dhcss', get_stylesheet_directory_uri() . '/dh.css', array('themecss'), '1.0.0', 'all');
@@ -34,7 +34,7 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
 
 function register_additional_theme_menu() {
     register_nav_menus( array(
-        'top-header-menu' => __('Top Header Menu', 'theme'), 
+        'top-header-menu' => __('Top Header Menu', 'theme'),
         'social' => __('Social Menu', 'theme'),
         'tags-menu' => __('Tags Menu', 'theme'),
         'footer-one' => __('Footer Menu One', 'theme'),
@@ -46,7 +46,7 @@ add_action('init', 'register_additional_theme_menu');
 
 
 function modify_nav_menu_args( $args ) {
-    
+
     if( 'tags-menu' == $args['theme_location'] )
     {
         $args['link_before'] = '#';
@@ -58,7 +58,7 @@ add_filter( 'wp_nav_menu_args', 'modify_nav_menu_args' );
 
 
 function tags_count( $items, $args ) {
-    
+
     if( 'tags-menu' == $args->theme_location )
     {
     //     //$args['link_before'] = '#';
@@ -78,14 +78,14 @@ add_filter( 'wp_nav_menu_items', 'tags_count', 10, 2 );
 
 
 function custom_modified_post_title ($title) {
-    
+
     if ( !is_admin() ) {
-        
+
         $title = str_replace('|','<br>', $title);
     } else {
-        
+
         $title = str_replace('|','', $title);
-    } 
+    }
     return $title;
 }
 add_filter( 'the_title', 'custom_modified_post_title');
@@ -100,13 +100,13 @@ add_filter( 'wp_title', 'custom_modified_post_wp_title', 10, 2 );
 
 /* Shortcodes */
 function add_sidenote_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'number' => 7,
     ), $atts, 'sidenote' );
 
     ob_start();
-        
+
         echo '<aside class="sidenote">'.apply_filters('the_content', $content).'</aside>';
         // do stuff
 
@@ -118,7 +118,7 @@ function add_sidenote_shortcode( $atts, $content = null ) {
 add_shortcode( 'sidenote', 'add_sidenote_shortcode' );
 
 function add_large_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'wide' => false,
     ), $atts, 'large' );
@@ -138,7 +138,7 @@ function add_large_shortcode( $atts, $content = null ) {
 add_shortcode( 'large', 'add_large_shortcode' );
 
 function add_cut_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'wide' => false,
     ), $atts, 'cut' );
@@ -152,7 +152,7 @@ function add_cut_shortcode( $atts, $content = null ) {
 add_shortcode( 'cut', 'add_cut_shortcode' );
 
 function add_lightbox_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'wide' => false,
     ), $atts, 'lightbox' );
@@ -169,7 +169,7 @@ function add_lightbox_shortcode( $atts, $content = null ) {
 add_shortcode( 'lightbox', 'add_lightbox_shortcode' );
 
 function add_row_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'wide' => false,
     ), $atts, 'row' );
@@ -195,13 +195,13 @@ function add_row_shortcode( $atts, $content = null ) {
 add_shortcode( 'row', 'add_row_shortcode' );
 
 function add_col_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'wide' => false,
     ), $atts, 'col' );
 
     // ob_start();
-        
+
         // echo '<div class="col">'.apply_filters('the_content', $content).'</div>';
         $output = '<div class="col">'.apply_filters('the_content', $content).'</div>';
         // do stuff
@@ -214,7 +214,7 @@ function add_col_shortcode( $atts, $content = null ) {
 add_shortcode( 'col', 'add_col_shortcode' );
 
 function add_tooltip_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'tooltip' );
@@ -230,7 +230,7 @@ function add_tooltip_shortcode( $atts, $content = null ) {
         // ob_end_clean();
 
     } else {
-        
+
         $parts = explode(',', $atts['id']);
         if(!$parts) return;
 
@@ -252,7 +252,7 @@ function add_tooltip_shortcode( $atts, $content = null ) {
 add_shortcode( 'tooltip', 'add_tooltip_shortcode' );
 
 function add_item_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'item' );
@@ -268,7 +268,7 @@ function add_item_shortcode( $atts, $content = null ) {
 add_shortcode( 'item', 'add_item_shortcode' );
 
 function add_section_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'section' );
@@ -280,7 +280,7 @@ function add_section_shortcode( $atts, $content = null ) {
 add_shortcode( 'section', 'add_section_shortcode' );
 
 function add_postquote_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'postquote' );
@@ -292,13 +292,13 @@ function add_postquote_shortcode( $atts, $content = null ) {
 add_shortcode( 'postquote', 'add_postquote_shortcode' );
 
 function add_aside_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'wide' => false,
     ), $atts, 'aside' );
 
     // ob_start();
-        
+
         // echo '<div class="col">'.apply_filters('the_content', $content).'</div>';
         $output = '<aside class="right">'.apply_filters('the_content', $content).'</aside>';
         // $output = '<aside class="right">'.$content.'</aside>';
@@ -312,7 +312,7 @@ function add_aside_shortcode( $atts, $content = null ) {
 add_shortcode( 'aside', 'add_aside_shortcode' );
 
 function add_divide_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'height' => 0,
     ), $atts, 'divide' );
@@ -326,7 +326,7 @@ add_shortcode( 'divide', 'add_divide_shortcode' );
 
 
 function add_sdvig_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'size' => 0,
     ), $atts, 'sdvig' );
@@ -338,7 +338,7 @@ function add_sdvig_shortcode( $atts, $content = null ) {
 add_shortcode( 'sdvig', 'add_sdvig_shortcode' );
 
 function add_list_authors_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => 0,
     ), $atts, 'list_authors' );
@@ -363,7 +363,7 @@ add_shortcode( 'list_authors', 'add_list_authors_shortcode' );
 /* Meta shortcodes */
 
 function add_intro_image_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'intro_image' );
@@ -384,7 +384,7 @@ function add_intro_image_shortcode( $atts, $content = null ) {
 add_shortcode( 'intro_image', 'add_intro_image_shortcode' );
 
 function add_main_tag_link_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'main_tag_link' );
@@ -400,7 +400,7 @@ function add_main_tag_link_shortcode( $atts, $content = null ) {
 add_shortcode( 'main_tag_link', 'add_main_tag_link_shortcode' );
 
 function add_views_meta_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'views_meta' );
@@ -410,7 +410,7 @@ function add_views_meta_shortcode( $atts, $content = null ) {
     <div class="meta-info metainline">
         <?php if(function_exists('the_views')) { ?>
             <span class="views">
-                <?php the_views(); ?>&nbsp;&nbsp;<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/views.png" alt=""> 
+                <?php the_views(); ?>&nbsp;&nbsp;<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/views.png" alt="">
             </span>&nbsp;&nbsp;&nbsp;&nbsp;
         <?php } ?>
         <span class="comments">
@@ -435,7 +435,7 @@ function add_views_meta_shortcode( $atts, $content = null ) {
 add_shortcode( 'views_meta', 'add_views_meta_shortcode' );
 
 function add_opening_date_place_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'opening_date_place' );
@@ -449,7 +449,7 @@ function add_opening_date_place_shortcode( $atts, $content = null ) {
 add_shortcode( 'opening_date_place', 'add_opening_date_place_shortcode' );
 
 function add_author_name_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'author_name' );
@@ -461,7 +461,7 @@ function add_author_name_shortcode( $atts, $content = null ) {
 add_shortcode( 'author_name', 'add_author_name_shortcode' );
 
 function add_smallify_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'smallify' );
@@ -473,7 +473,7 @@ function add_smallify_shortcode( $atts, $content = null ) {
 add_shortcode( 'smallify', 'add_smallify_shortcode' );
 
 function add_smalltext_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'smalltext' );
@@ -485,7 +485,7 @@ function add_smalltext_shortcode( $atts, $content = null ) {
 add_shortcode( 'smalltext', 'add_smalltext_shortcode' );
 
 function add_break_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'break' );
@@ -497,7 +497,7 @@ function add_break_shortcode( $atts, $content = null ) {
 add_shortcode( 'break', 'add_break_shortcode' );
 
 function add_clear_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'clear' );
@@ -509,7 +509,7 @@ function add_clear_shortcode( $atts, $content = null ) {
 add_shortcode( 'clear', 'add_clear_shortcode' );
 
 function add_random_tags_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'random_tags' );
@@ -531,7 +531,7 @@ function add_random_tags_shortcode( $atts, $content = null ) {
 add_shortcode( 'random_tags', 'add_random_tags_shortcode' );
 
 function add_contents_list_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'contents_list' );
@@ -543,7 +543,7 @@ function add_contents_list_shortcode( $atts, $content = null ) {
 add_shortcode( 'contents_list', 'add_contents_list_shortcode' );
 
 function add_text_banner_shortcode( $atts, $content = null ) {
-    
+
     $atts = shortcode_atts( array(
         'id' => null,
     ), $atts, 'text_banner' );
@@ -557,7 +557,7 @@ function add_text_banner_shortcode( $atts, $content = null ) {
 add_shortcode( 'text_banner', 'add_text_banner_shortcode' );
 
 // function add_contents_shortcode( $atts, $content = null ) {
-    
+
 //     $atts = shortcode_atts( array(
 //         'id' => null,
 //     ), $atts, 'contents' );
@@ -574,7 +574,7 @@ add_shortcode( 'text_banner', 'add_text_banner_shortcode' );
 
 /* Render functions */
 function render_post_item($post = null, $class = null, $size = null) {
-    
+
     if(!$post) return;
 
     $tags = '';
@@ -584,21 +584,21 @@ function render_post_item($post = null, $class = null, $size = null) {
     $relation_tags = get_field('relation_tags', $post);
     $relation_tags_main = get_field('relation_tags_main', $post);
     $custom_header = get_field('custom_header', $post);
-    
+
     $terms = wp_get_post_terms($post->ID, 'relation');
     $link = get_permalink($post);
 
     if($terms) foreach($terms as $term) $tags .= '<a href="'.get_term_link($term).'">'.$term->name.'</a> ';
 
-    if($size) $thumb = get_the_post_thumbnail($post, $size); 
+    if($size) $thumb = get_the_post_thumbnail($post, $size);
     else {
         $custom_height = get_field('custom_height', $post);
-        
+
         if($custom_height && $class != 'featured') $thumb = get_the_post_thumbnail($post, 'custom-height-'.$custom_height);
-        else $thumb = get_the_post_thumbnail($post, 'large'); 
+        else $thumb = get_the_post_thumbnail($post, 'large');
     }
 
-    if($relation_tags_main) $tag = '<a href="'.get_term_link($relation_tags_main).'">'.$relation_tags_main->name.'</a>'; 
+    if($relation_tags_main) $tag = '<a href="'.get_term_link($relation_tags_main).'">'.$relation_tags_main->name.'</a>';
     elseif($tags) $tag = $tags; //the_tags('',' ',' ');
 
     ob_start();
@@ -606,17 +606,17 @@ function render_post_item($post = null, $class = null, $size = null) {
     ?>
     <article class="item <?php echo $class.' '; if(!$thumb) echo 'no-img'; if($relation_tags_main) echo 'rel-'.$relation_tags_main->slug; ?>">
         <div class="wrap">
-            
+
             <?php if($thumb) { ?>
                 <a href="<?php echo $link ?>"><?php echo $thumb; ?></a>
             <?php } ?>
-            
+
             <div class="text">
-                
+
                 <?php if($tag) { ?>
                     <span class="tag"><?php echo $tag; ?></span>
                 <?php } ?>
-                
+
                 <div>
                     <a class="title-link" href="<?php echo $link ?>"><?php if($custom_header) echo $custom_header; else echo get_the_title($post); ?></a>
                     <a class="text-link" href="<?php echo $link ?>">
@@ -637,7 +637,7 @@ function render_post_item($post = null, $class = null, $size = null) {
 }
 
 function render_news_item($post = null, $class = null) {
-    
+
     if(!$post) return;
 
     $custom_header = get_field('custom_header', $post);
@@ -663,7 +663,7 @@ function render_news_item($post = null, $class = null) {
 }
 
 function render_calendar_item($post = null, $class = null, $size = null) {
-    
+
     if(!$post) return;
 
     ob_start();
@@ -691,11 +691,11 @@ function render_calendar_item($post = null, $class = null, $size = null) {
         <span class="date"><?php if($start_time) echo $start_time; if($end_time && $end_time != $start_time) echo ' – '.$end_time; ?></span>
         <span class="date"><?php if($custom_place) echo $custom_place; elseif($place) foreach($place as $p) echo $p->name.' '; ?></span>
         <a href="<?php echo $link ?>">
-        <?php if($size) echo get_the_post_thumbnail($post, $size); 
+        <?php if($size) echo get_the_post_thumbnail($post, $size);
             else {
                 $custom_height = get_field('custom_height', $post);
                 if($custom_height) echo get_the_post_thumbnail($post, 'custom-height-'.$custom_height);
-                else echo get_the_post_thumbnail($post); 
+                else echo get_the_post_thumbnail($post);
             } ?>
         </a>
     </article>
@@ -752,7 +752,7 @@ function render_filter_select($source = null, $class = null, $hide_empty = false
         '.$output.'
         </ul></div>';
     else $output = '<select name="'.$class.'" id="'.$class.'"><option value="">+</option>'.$output.'</select>';
-    
+
     return $output;
 }
 
@@ -779,7 +779,7 @@ function render_filter_list($source = null, $class = null, $hide_empty = false, 
 
         $ignore = get_field('ignore_in_filter', $term);
         if($ignore) continue;
-        
+
         $city = get_field('city', $term);
         $concept = get_field('concept', $term);
         $inst = get_field('inst', $term);
@@ -792,9 +792,9 @@ function render_filter_list($source = null, $class = null, $hide_empty = false, 
 
         $insts = '';
         if($inst) foreach($inst as $c) $insts .= $c->slug.' ';
-        
+
         if(mb_substr($term->name,0,1) != $first) $output .= '<li class="letter">'.mb_substr($term->name,0,1).'</li>';
-        
+
         $output .= '<li data-city="'.$cities.'" data-concept="'.$concepts.'" data-inst="'.$insts.'" value="'.$term->slug.'"><a class="name" href="'.get_term_link($term).'">'.$term->name.'<sup>'.$term->count.'</sup></a></li>';
 
         $first = mb_substr($term->name,0,1);
@@ -829,7 +829,7 @@ function render_filters_lists($parent_term = null, $class = null, $hide_empty = 
 
         $ignore = get_field('ignore_in_filter', $term);
         if($ignore) continue;
-        
+
         $city = get_field('city', $term);
         $concept = get_field('concept', $term);
         $inst = get_field('inst', $term);
@@ -842,9 +842,9 @@ function render_filters_lists($parent_term = null, $class = null, $hide_empty = 
 
         $insts = '';
         if($inst) foreach($inst as $c) { $insts .= $c->slug.' '; $insts_list[$c->slug] = $c; }
-        
+
         if(mb_substr($term->name,0,1) != $first) $output .= '<li class="letter">'.mb_substr($term->name,0,1).'</li>';
-        
+
         $output .= '<li data-city="'.$cities.'" data-concept="'.$concepts.'" data-inst="'.$insts.'" value="'.$term->slug.'"><a class="name" href="'.get_term_link($term).'">'.$term->name.'<sup>'.$term->count.'</sup></a></li>';
 
         $first = mb_substr($term->name,0,1);
@@ -864,7 +864,7 @@ function render_term_preview($term = null, $show_count = true) {
     $inst = get_field('inst', $term);
 
     if($show_count) $show_count = '<sup>'.$term->count.'</sup>';
-    
+
     $output .= '<li data-city="'.$city->slug.'" data-concept="'.$concept->slug.'" data-inst="'.$inst->slug.'" value="'.$term->slug.'"><a class="name" href="'.get_term_link($term).'">'.$term->name.$show_count.'</a>';
 
     $image = get_field('image', $term);
@@ -949,11 +949,11 @@ function render_side_calendar($slug = null) {
            'terms'    => $slug
         )
     );
-    
+
     $calendarloop = new WP_Query( $calendarargs );
     $calendaritems = [];
 
-    if ( $calendarloop->have_posts() ) : while ( $calendarloop->have_posts() ) : $calendarloop->the_post(); 
+    if ( $calendarloop->have_posts() ) : while ( $calendarloop->have_posts() ) : $calendarloop->the_post();
 
         global $post;
 
@@ -973,7 +973,7 @@ function render_side_calendar($slug = null) {
         $city = wp_get_post_terms( $post->ID, 'relation', array( 'parent' => 3843 ) );
         $place = wp_get_post_terms( $post->ID, 'relation', array( 'parent' => 3862 ) );
         $type = wp_get_post_terms( $post->ID, 'relation', array( 'parent' => 3846 ) );
-        
+
         ob_start(); ?>
 
         <article class="item">
@@ -985,7 +985,7 @@ function render_side_calendar($slug = null) {
                 <?php if(has_excerpt($post->ID)) the_excerpt(); ?>
             </div>
         </article>
-        
+
         <?php $output = ob_get_contents();
         ob_end_clean();
 
@@ -994,19 +994,19 @@ function render_side_calendar($slug = null) {
 
         endwhile;
     endif;
-    
+
     wp_reset_query();
 
     if($calendaritems['now']) {
         $today = implode('', $calendaritems['now']);
         if($today) echo '<div class="segodnyacal">Сегодня:</div>'.$today;
     }
-        
+
     if($calendaritems['soon']) {
         $soon = implode('', $calendaritems['soon']);
         if($soon) echo '<div class="izavtracal">Скоро:</div>'.$soon;
     }
-        
+
     ?>
 
     <?php //echo implode('', $calendaritems['now']); ?>
@@ -1032,10 +1032,10 @@ function parse_img_func($content) {
     preg_match_all('/<iframe.*?src=".*?youtube.*?".*?><\/iframe>/', $content, $vidmatches);
 
     // if($vidmatches) foreach($vidmatches[0] as $match) $content = str_replace($match, '<div class="videowrapper">'.$match.'</div>', $content);
-    
+
     if ( is_single() ) {
         $matches = array();
-        
+
         preg_match('/<p>(<img.*?)?<\/p>/', $content, $matches);
         if($matches) $content = str_replace($matches[0], $matches[1], $content);
 
@@ -1066,14 +1066,14 @@ function load_more_posts() {
 
     $offset = 0;
     $load = 12;
-    
+
     $offset = $_GET['offset'];
     $term = $_GET['term'];
     $parent = $_GET['parent'];
     $search = $_GET['search'];
     $load = $_GET['load'];
     $author = $_GET['author'];
-    
+
     if(isset($load) && $load != '') $load = sanitize_text_field($load);
 
     $output = '';
@@ -1107,7 +1107,7 @@ function load_more_posts() {
                'terms'    => $term
            )
     );
-    
+
     if(isset($parent) && $parent != '') {
 
         $terms = get_terms(array(
@@ -1120,19 +1120,19 @@ function load_more_posts() {
 
         // ob_start();
         // foreach($terms as $key => $$term) {
-            
+
         // }
         // $output = ob_get_contents();
         // ob_end_clean();
 
     } else {
         $loop = new WP_Query( $args );
-        
+
         // if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
-        
+
         //     endwhile;
         // endif;
-        
+
         // wp_reset_query();
 
         // $loop = new WP_Query( $args );
@@ -1166,7 +1166,7 @@ function get_twitter_number($url = null) {
 
     if(!$url) return;
     // echo $url;
-    // $url = 'http://hungryshark.ru/articles/2767-biblioteka-food-and-the-city'; 
+    // $url = 'http://hungryshark.ru/articles/2767-biblioteka-food-and-the-city';
     $twitter_request = file_get_contents('http://cdn.api.twitter.com/1/urls/count.json?url='.$url);
     $twitter = json_decode($twitter_request);
     return $twitter;
@@ -1203,14 +1203,14 @@ add_action( 'wp_ajax_load_more_posts_ajax', 'load_more_posts_ajax' );
 if( function_exists('acf_add_options_page') ) {
 
     // acf_add_options_page('Theme Settings');
- 
+
     $option_page = acf_add_options_page(array(
         'page_title'    => 'Theme General Settings',
         'menu_title'    => 'Theme Settings',
         'menu_slug'     => 'theme-general-settings',
         'capability'    => 'edit_posts',
         'redirect'  => false
-    )); 
+    ));
 }
 
 /* ACF */
@@ -1271,7 +1271,7 @@ function ard_cities_items($field) {
 add_filter('acf/load_field/name=ard_cities', 'ard_cities_items');
 
 function ard_concepts_items($field) {
-    
+
     $terms = get_terms(array(
         'taxonomy' => 'relation',
         'hide_empty' => false,
@@ -1299,7 +1299,7 @@ function ard_type_items($field) {
 add_filter('acf/load_field/name=ard_type', 'ard_type_items');
 
 function ard_themes_items($field) {
-    
+
     $terms = get_terms(array(
         'taxonomy' => 'relation',
         'hide_empty' => false,
@@ -1429,7 +1429,7 @@ function gallery_shortcode_imagedirect($attr) {
 
     $gallery_style = $gallery_div = '';
     if ( apply_filters( 'use_default_gallery_style', true ) )
-        
+
     $size_class = sanitize_html_class( $size );
     $gallery_div = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>";
     $output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );

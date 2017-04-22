@@ -51,9 +51,9 @@ wp_reset_query();
 ?>
 
 <div class="content container grid <?php echo $_GET['city']; echo $_GET['filter']; ?>">
-	
+
 	<?php if(!isset($_GET['city']) && !isset($_GET['filter'])) { ?>
-	
+
 	<aside class="left cities"></aside>
 
 	<section class="site-main top-nav">
@@ -62,8 +62,8 @@ wp_reset_query();
 
 		    	$featured_banner = get_field('featured_banner', 'options');
 		    	if($featured_banner) echo '<div class="banner-featured">'.$featured_banner.'</div>';
-			    
-				
+
+
 				if($featured) echo render_post_item($featured, 'featured');
 				else echo render_post_item($loop->posts[0], 'featured');
 			?>
@@ -88,9 +88,9 @@ wp_reset_query();
 				// 	   'terms'    => sanitize_text_field($_GET['city'])
 				// 	)
 				// );
-				
+
 				$newsloop = new WP_Query( $newsargs );
-				
+
 				if ( $newsloop->have_posts() ) : while ( $newsloop->have_posts() ) : $newsloop->the_post(); ?>
 
 					<article class="item">
@@ -99,10 +99,10 @@ wp_reset_query();
 						</div>
 						<span class="date"><?php the_time('d.m'); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php the_time('H:i'); ?></span>
 					</article>
-					
+
 					<?php endwhile;
 				endif;
-				
+
 				wp_reset_query();
 			?>
 		</div>
@@ -116,8 +116,8 @@ wp_reset_query();
 
 	<a href="#" data-toggler="aside.calendar|active, this|active" class="mobile expand"><span>+</span></a>
 	<?php } ?>
-		
-	
+
+
 
 	<?php if(isset($_GET['city']) || isset($_GET['filter'])) { ?>
 	<aside class="left calendar">
@@ -166,21 +166,21 @@ wp_reset_query();
 				   'terms'    => sanitize_text_field($_GET['filter'])
 				)
 			);
-			
+
 			$photoloop = new WP_Query( $photoargs );
 			wp_reset_query();
 
-			wp_enqueue_script('slick-slider'); 
+			wp_enqueue_script('slick-slider');
 
 			if(!isset($_GET['filter']) || $_GET['filter'] != 'photos' && $_GET['filter'] != 'fotoe-kskursiya') {
 
-				echo '<article id="photo-slider" class="wide photo-slider">'; 
+				echo '<article id="photo-slider" class="wide photo-slider">';
 
 					if(count($photoloop->posts) < 3) {
-						
+
 						echo '<div class="grid spread blocks mb">';
 					} else {
-						
+
 						echo '<div class="slick-slider" data-slick-slider data-slick=\'{ "infinite": false, "slidesToShow": 3, "slidesToScroll": 3, "arrows": true, "responsive": [{"breakpoint": 980, "settings": {"slidesToShow": 2, "slidesToScroll": 2} },{"breakpoint": 640, "settings": {"slidesToShow": 1, "slidesToScroll": 1} }] }\'>';
 					}
 
@@ -197,7 +197,7 @@ wp_reset_query();
 			}
 		?>
 		</div>
-		
+
 		<?php if(count($loop->posts) >= $start_posts ) { ?>
 		<div class="loadmore-wrap">
 			<?php if(isset($_GET['city']) && $_GET['city'] != '') { ?>
@@ -206,7 +206,7 @@ wp_reset_query();
 
 			<?php } elseif(isset($_GET['filter']) && $_GET['filter'] != '') { ?>
 
-				<a href="#" class="loadmore" data-posts-offset="<?php echo $start_posts; ?>" data-term="<?php echo sanitize_text_field($_GET['filter']); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/plus.svg" alt="Загрузить еще" title="Загрузить еще"></a> 
+				<a href="#" class="loadmore" data-posts-offset="<?php echo $start_posts; ?>" data-term="<?php echo sanitize_text_field($_GET['filter']); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/plus.svg" alt="Загрузить еще" title="Загрузить еще"></a>
 
 			<?php } else { ?>
 

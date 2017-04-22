@@ -13,15 +13,15 @@
 
     <?php wp_head(); ?>
     <!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css"/> -->
-    
+
 </head>
 <body <?php body_class(); ?>>
     <div class="fakeandroiddiv">
 
     <?php $top_banner = get_field('top_banner', 'options'); ?>
-    
+
     <div class="static-header <?php if($top_banner) echo ' with-banner'; ?>">
-        
+
         <?php if($top_banner) echo '<div class="banner-top container">'.$top_banner.'</div>'; ?>
 
         <header class="site-header container">
@@ -38,7 +38,7 @@
                             foreach($main_cities as $city) {
 
                                 if(isset($_GET['city']) && $_GET['city'] != '' && $city->slug == $_GET['city']) $current = $city->name.' ';
-                                
+
                                 $main_cities_select .= '<li><a data-slug="'.$city->slug.'" href="'.esc_url( home_url( '/' ) ).'?city='.$city->slug.'">'.$city->name.'</a></li>';
                             }
 
@@ -85,12 +85,12 @@
                 </nav>
             </div>
             <div class="bottom-deck">
-                
+
                 <div class="grid spread middle wrap">
                     <a class="wiki-link" href="<?php echo get_permalink(44589); ?>">Справочник</a>
                     <a href="#" data-toggler=".top-deck|active, self|active" class="mobile-menu"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/menu.png" alt="Меню"></a>
                     <a href="#" data-toggler=".search-block|active" class="mobile-search"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/search.png" alt="Поиск"></a>
-                    
+
                     <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="black" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt=""><img class="blue" src="<?php echo get_stylesheet_directory_uri(); ?>/img/aroundartblue.jpg" alt=""></a>
 
                     <a href="#" data-toggler=".search-block|active" class="desktop search-button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/search.png" alt="Поиск"></a>
@@ -99,17 +99,17 @@
             </div>
 
             <div class="search-block">
-                <div class="wrap">   
+                <div class="wrap">
                     <?php get_search_form(); ?>
-                </div> 
+                </div>
             </div>
         </header>
     </div>
 
     <div class="content container grid below-fixed">
-        
-        <?php 
-            if(is_category('calendar')) { 
+
+        <?php
+            if(is_category('calendar')) {
                 global $wp_query;
 
                 $eventsCity = [];
@@ -141,7 +141,7 @@
             ?>
 
             <div class="calendar-filters grid">
-                
+
                 <div class="filter words-filter">
                     <label data-toggler=".filter .soon|active">Скоро</label>
 
@@ -161,7 +161,7 @@
                     </div>
                     <div class="inputs"><span class="soon-label plus event-words-current" data-toggler=".filter .soon|active">+</span></div>
                 </div>
-                
+
                 <div class="filter range-filter">
                     <label class="event-date-range" data-toggler=".range-inputs|hide-item, .range-label|dn">Интервал</label>
 
@@ -174,12 +174,12 @@
                     </div>
                     <div class="inputs range-label"><span class="plus" data-toggler=".range-inputs|hide-item, .range-label|dn">+</span></div>
                 </div>
-                
+
                 <div class="filter">
                     <label for="event-city">Город</label><?php echo render_filter_select($eventsCity,'event-city', true, true, 'event-city', true); //render_filter_select(3843,'event-city', true, true); ?><a class="current event-city-current inputs plus" data-toggler=".event-city|active, this|active">+</a>
                 </div>
                 <!-- <label for="event-place">Место</label><?php echo render_filter_select(3844,'event-place'); ?> -->
-                
+
                 <div class="filter">
                     <label for="event-place">Тип</label><?php echo render_filter_select($eventsType,'event-type', false, true, 'event-type', true); //render_filter_select(3846,'event-type', false, true); ?><a class="current event-type-current inputs plus" data-toggler=".event-type|active, this|active">+</a>
                 </div>
@@ -200,7 +200,7 @@
                 //         foreach($main_cities as $city) {
 
                 //             if(isset($_GET['city']) && $_GET['city'] != '' && $city->slug == $_GET['city']) $current = $city->name.' ';
-                            
+
                 //             $main_cities_select .= '<li><a data-slug="'.$city->slug.'" href="'.esc_url( home_url( '/' ) ).'?city='.$city->slug.'">'.$city->name.'</a></li>';
                 //         }
 
@@ -210,38 +210,38 @@
 
                 //     echo '<label for="global-city"><a href="#" class="cities-plus" data-toggler=".global-city|active, this|active">'.$current.'</a></label>';
                 //     echo $main_cities_select;
-                // } 
+                // }
                 if(!isset($_GET['filter']) || $_GET['filter'] == '') echo $cities;
             ?>
         </aside>
         <?php } else { ?>
         <aside class="left <?php if (in_category(array(2089,2088))) { ?>fuckthatshit<?php } ?>"><?php if (in_category(2089)) { ?> <a class="hidemebitch" href="/category/news"><h3>Новости</h3></a><?php } ?><?php if (in_category(2088)) { ?> <a class="hidemebitch" href="/category/calendar"><h3>Календарь</h3></a><?php } ?>
             <?php
-            if(is_search()) {}//echo '<h3 class="section-title">Поиск<br>'.get_search_query().'</h3>'; 
+            if(is_search()) {}//echo '<h3 class="section-title">Поиск<br>'.get_search_query().'</h3>';
             elseif(get_queried_object()->name) echo '<h3>'.get_queried_object()->name.'</h3>';
             //elseif(get_queried_object()->post_title && is_page()) echo '<h3>'.get_queried_object()->post_title.'</h3>';
-                // else get_the_title(get_the_ID()); 
+                // else get_the_title(get_the_ID());
             ?>
         </aside>
         <?php } ?>
 
         <section class="site-main top-nav <?php if (in_category(array (2089,2088))) { ?>morebullshit<?php } ?>">
-            
+
             <?php $tag_menu = get_field('tag_menu', 'options'); if(is_front_page() || in_category(2089)|| in_category(2088) && $tag_menu) { ?>
 
             <nav class="tags">
                 <?php //wp_nav_menu( array('theme_location' => 'tags-menu') ); ?>
-                <?php 
+                <?php
                     $tag_menu_output = '<ul>';
                     // foreach($tag_menu as $item) $tag_menu_output .= '<li><a data-slug="'.$item->slug.'" href="'.get_term_link($item).'">#'.$item->name.'<sup>'.$item->count.'</sup></a></li>';
                         foreach($tag_menu as $item) {
-                            
+
                             if(isset($_GET['filter']) && $_GET['filter'] != '') {
                                 if($item->slug == $_GET['filter']) $tag_menu_output .= '<li><a data-slug="'.$item->slug.'" href="'.esc_url( home_url( '/' ) ).'?filter='.$item->slug.'">#'.$item->name.'<sup>'.$item->count.'</sup></a></li>';
                             } else $tag_menu_output .= '<li><a data-slug="'.$item->slug.'" href="'.esc_url( home_url( '/' ) ).'?filter='.$item->slug.'">#'.$item->name.'<sup>'.$item->count.'</sup></a></li>';
                         }
                     $tag_menu_output .= '</ul>';
-                    echo $tag_menu_output; 
+                    echo $tag_menu_output;
                 ?>
                 <a href="#" data-toggler=".tags ul|active, this|active" class="mobile expand"><span>+</span></a>
             </nav>
