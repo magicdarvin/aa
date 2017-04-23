@@ -680,7 +680,7 @@ section.site-main.the-main { margin-top: 10px;}
 .footer-wrap .copy { display: none;}
 section.site-main .item:hover img { opacity: 1;}
 .container { max-width: 675px; }
-.bottom-deck { padding-left: 0px;}
+/*.bottom-deck { padding-left: 0px;} Adp-S-2.*/
 section.site-main.the-main { width: 100%;}
 section.site-main .item { width: 25%;}
 section.site-main .item { margin-left: 16px; margin-right: 20px;}
@@ -716,7 +716,7 @@ section.site-main { width: 100%; margin: 0;}
 .single-post .bottom-deck { padding-left: 0px !important;}
 .with-banner + .below-fixed aside.cities.left { top: 53px !important;}
 .site-header { margin-top: 0px; height: 115px;}
-   /* .calendar {display: none !important;}*/
+    .calendar {display: none !important;}
     section.site-main .item .date { position:relative; left:0; top:0; bottom: 0;  display: block; transform: none;}
     h3 { font-size: 16px !important;}
     nav.tags ul a, nav.random ul a { font-size: 16px !important;}
