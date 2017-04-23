@@ -713,7 +713,7 @@ aside.left { display: none;}
 section.site-main { width: 100%; margin: 0;}
 .single-post section.site-main { padding: 0;}
 .below-fixed { padding-top: 0px !important;}
-.single-post .bottom-deck { padding-left: 0px !important;}
+/*.single-post .bottom-deck { padding-left: 0px !important;} Adp-S-2.*/
 .with-banner + .below-fixed aside.cities.left { top: 53px !important;}
 .site-header { margin-top: 0px; height: 115px;}
     .calendar {display: none !important;}
