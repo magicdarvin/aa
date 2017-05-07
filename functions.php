@@ -27,6 +27,8 @@ function theme_scripts() {
     wp_enqueue_style('themecss');
     wp_register_style('dhcss', get_stylesheet_directory_uri() . '/dh.css', array('themecss'), '1.0.0', 'all');
     wp_enqueue_style('dhcss');
+    wp_register_style('bugfixes', get_stylesheet_directory_uri() . '/css/bugfixes.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('bugfixes');
     wp_enqueue_style('calendar-stuff', 'http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css', array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');

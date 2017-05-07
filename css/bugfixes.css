@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*Adp-L-15. Слово подсказка*/
+@media only screen and (max-width: 639px) {
+  .the-content .tooltip:hover {
+    display: inline;
+    color: #fff;
+    background: #0d20ff; }
+  .the-content .tooltip .wrap {
+    margin: 16px 40px;
+    display: block;
+    pointer-events: auto;
+    padding: 0;
+    background-color: white;
+    min-width: 200px;
+    text-align: center; }
+  .the-content .tooltip:hover .wrap {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1; } }
+
+/*Adp-S-2. Скачет шапка*/
+@media only screen and (min-width: 639px) {
+  .bottom-deck {
+    padding-left: 0px; }
+  .single-post .bottom-deck {
+    padding-left: 0px !important; } }

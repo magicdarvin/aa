@@ -1,0 +1,27 @@
+{
+  "name": "aroundart",
+  "version": "1.0.0",
+  "description": "bugfixes for aroundart by Illia Yakovenko",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicdarvin/aa.git"
+  },
+  "author": "Illia Yakovenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicdarvin/aa/issues"
+  },
+  "homepage": "https://github.com/magicdarvin/aa#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
