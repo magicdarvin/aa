@@ -26,7 +26,16 @@
 
 
 /*Adp-S-2. Скачет шапка*/
-@media only screen and (min-width: 639px) {
+@media only screen and (min-width: 639px) and (max-width: 1099px){
     .bottom-deck { padding-left: 0px;}
     .single-post .bottom-deck { padding-left: 0px !important;}
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1240px){
+    .bottom-deck.fixed {
+        margin-left:11px;
+    }
+    .bottom-deck.fixed .search-button{
+        padding-right:1px;
+    }
 }
